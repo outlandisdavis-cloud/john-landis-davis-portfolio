@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Landis Davis — Construction & Maintenance Professional</title>
+<style>
+  :root{
+    --navy:#1f2a44;
+    --navy2:#2f4066;
+    --accent:#b3592a;
+    --gold:#c9a227;
+    --ink:#222;
+    --gray:#555;
+    --line:#e2e2e2;
+    --bg:#faf8f5;
+    --white:#fff;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--navy)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:28px 0;
+    border-bottom:6px solid var(--gold);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .name{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:.3px;
+  }
+  .name span{color:var(--gold)}
+  .contact-line{
+    font-size:14px;
+    color:#cdd6e2;
+    display:flex;flex-direction:column;gap:2px
+  }
+  .contact-line b{display:block;font-size:15px}
+
+  /* Hero */
+  .hero{
+    background:radial-gradient(circle at top left,var(--navy),var(--navy2));
+    color:#fff;
+    text-align:center;
+    padding:52px 20px 40px;
+    margin-top:18px;
+  }
+  .hero h1{
+    font-size:30px;
+    margin-bottom:8px;
+    letter-spacing:1px;
+  }
+  .hero h1 .accent{color:var(--gold)}
+  .hero p{max-width:620px;margin:0 auto 18px;opacity:.92;font-size:16px}
+  .hero .tagline{font-size:15px;opacity:.8}
+  .hero .contact-line-white{color:#fff;font-size:14px;display:flex;flex-direction:column;gap:2px}
+  .hero .contact-line-white b{display:block;font-size:15px}
+
+  /* Buttons */
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    padding:12px 22px;
+    border-radius:var(--radius);
+    font-weight:600;
+    margin-top:14px;
+    transition:transform .15s,background .15s;
+  }
+  .btn:hover{background:var(--navy);transform:translateY(-1px)}
+
+  /* Sections */
+  section{padding:30px 0;border-bottom:1px solid var(--line)}
+  .section-label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  h2{
+    font-size:21px;
+    color:var(--navy);
+    margin-bottom:14px;
+    padding-bottom:6px;
+    border-bottom:2px solid var(--gold);
+  }
+  .block{margin-bottom:18px}
+  .block:last-child{margin-bottom:0}
+  .entry{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    padding:14px 16px;
+  }
+  .entry .org{
+    font-size:16px;
+    font-weight:700;
+    color:var(--navy);
+  }
+  .entry .meta{font-size:13px;color:var(--gray);margin-bottom:6px}
+  .entry .meta span{display:block}
+  .entry p{font-size:14px;color:#444;margin-top:4px}
+  .entry ul{margin-top:6px}
+  .entry li{font-size:14px;color:#444;margin-bottom:4px;padding-left:16px;position:relative}
+  .entry li::before{content:"•";position:absolute;left:0;color:var(--accent)}
+
+  /* Skills grid */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
+  .skill{
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:3px solid var(--gold);
+    border-radius:var(--radius);
+    padding:12px 14px;
+  }
+  .skill .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
+  .skill .val{font-size:13px;color:#444;margin-top:4px}
+
+  /* Driver callout */
+  .driver-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--navy);
+    border-radius:var(--radius);
+    padding:14px 16px;
+  }
+  .driver-card b{display:block;font-size:15px;margin-bottom:4px}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .contact-box .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
+  .contact-box .val{font-size:15px;font-weight:600;color:var(--navy);margin-top:4px}
+  .contact-box .sub{font-size:12px;color:var(--gray);margin-top:2px}
+
+  .contact-note{margin-top:14px;font-size:14px;color:#444;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .contact-note b{display:block;color:var(--navy);margin-bottom:4px}
+
+  /* Footer */
+  footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    padding:24px 20px;
+    margin-top:30px;
+    font-size:13px;
+    opacity:.85;
+  }
+
+  @media (max-width:600px){
+    .contact-grid{grid-template-columns:1fr}
+    .hero h1{font-size:24px}
+    h2{font-size:19px}
+    .name{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="name">John Landis Davis</div>
+    <div class="contact-line">
+      <b>9010 Abel Court, LaBelle, FL</b>
+      <b>(239) 292-1211</b>
+      <b>outlandisdavis@gmail.com</b>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Construction &amp; Maintenance<br><span class="accent">Professional</span></h1>
+  <p>Hands-on experience across construction labor, maintenance, independent contracting, behavioral health support, and student mentorship.</p>
+  <div class="contact-line-white">
+    <b>9010 Abel Court, LaBelle, FL</b>
+    <b>(239) 292-1211</b>
+    <b>outlandisdavis@gmail.com</b>
+  </div>
+  <a class="btn" href="#contact">Get In Touch</a>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">About</div>
+    <h2>Education &amp; Skills</h2>
+
+    <div class="block">
+      <h3>Education</h3>
+      <div class="entry">
+        <div class="org">Florida Southwestern State College — Ft. Myers, FL</div>
+        <div class="meta"><span>A.A. (2021–2024)</span><span>Member of 5 honor societies</span></div>
+      </div>
+      <div class="entry">
+        <div class="org">Saint Leo University — St. Leo, FL</div>
+        <div class="meta"><span>B.A. in Criminal Justice &amp; Psychology (2021–2024)</span></div>
+      </div>
+      <div class="entry">
+        <div class="org">GED — Lee County, FL</div>
+        <div class="meta"><span>1999</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill"><div class="lbl">Technical</div><div class="val">Python (basic), PyCharm (IDE), basic computer literacy</div></div>
+        <div class="skill"><div class="lbl">Construction &amp; Maintenance</div><div class="val">site labor, repairs, preventive maintenance, material handling, site prep, construction support</div></div>
+        <div class="skill"><div class="lbl">Independent Contracting</div><div class="val">LLC owner/operator, subcontracting management, project scheduling, on-site logistics</div></div>
+        <div class="skill"><div class="lbl">Interpersonal</div><div class="val">client liaison, student mentoring, cross-departmental communication, recovery support, team collaboration</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="driver-card">
+        <b>Transportation</b>
+        No driver's license. Relies on a 20-mile-range electric scooter for local transport — job search limited to commute-radius employers.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Experience</div>
+    <h2>Work Experience</h2>
+
+    <div class="entry">
+      <div class="org">Technically Outlandis LLC — Owner/Operator (Independent Contractor)</div>
+      <div class="meta"><span>Naples, FL · Mar 2025 – Jun 2026</span></div>
+      <ul>
+        <li>Operated independently owned LLC, securing subcontracting engagements through Bay Shore Place</li>
+        <li>Delivered building maintenance and repair services across client job sites</li>
+        <li>Managed end-to-end project execution, scheduling, and on-site logistics</li>
+        <li>Demonstrated self-management, responsibility, and client-facing accountability</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="org">Express Employment (Temp Agency) — Maintenance Technician / Construction Laborer</div>
+      <div class="meta"><span>Ft. Myers, FL · Mar 2024 – Feb 2025</span></div>
+      <ul>
+        <li>Performed maintenance technician and construction labor duties across multiple job sites</li>
+        <li>Executed repairs, preventive maintenance, and construction support tasks</li>
+        <li>Maintained clean, safe, and organized work environments</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="org">People Ready (Temp Agency) — Construction &amp; General Labor</div>
+      <div class="meta"><span>Ft. Myers, FL · Jan 2023 – Mar 2024</span></div>
+      <ul>
+        <li>Completed construction and general labor assignments across rotating job sites</li>
+        <li>Handled material handling, site preparation, and cleanup operations</li>
+        <li>Adapted quickly to varying job sites, tools, and safety requirements</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="org">Charlotte Behavioral Health Center — Addiction Recovery Technician</div>
+      <div class="meta"><span>Charlotte County, FL · Apr 2022 – Dec 2022</span></div>
+      <ul>
+        <li>Supported clients in an in-patient addiction recovery program</li>
+        <li>Assisted with rehabilitation programming and daily treatment activities</li>
+        <li>Maintained HIPAA-care standards, sanitation protocols, and confidential client documentation</li>
+        <li>Demonstrated patience, empathy, and teamwork in a client-focused environment</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="org">Florida Southwestern State College — Peer Mentor</div>
+      <div class="meta"><span>Ft. Myers, FL · Sep 2021 – Apr 2022</span></div>
+      <ul>
+        <li>Guided first-year students through academic adjustment and transition</li>
+        <li>Served as liaison between students and professors, facilitating communication and support</li>
+        <li>Demonstrated strong interpersonal and communication skills</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Honors</div>
+    <h2>Honors &amp; Awards</h2>
+    <div class="block">
+      <div class="entry"><div class="org">Phi Theta Kappa</div><div class="meta"><span>Recording Secretary; All-Florida Academic Team member</span></div></div>
+      <div class="entry"><div class="org">Spire Adult Learners Honor Society</div></div>
+      <div class="entry"><div class="org">Omega Nu Lambda Online Student Honor Society</div></div>
+      <div class="entry"><div class="org">Delta Epsilon Sigma Catholic Students Honor Society</div></div>
+      <div class="entry"><div class="org">Psi Chi Honor Society in Psychology</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Connect</div>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-box">
+        <div class="lbl">Phone</div>
+        <div class="val">(239) 292-1211</div>
+        <div class="sub">Local transport by electric scooter</div>
+      </div>
+      <div class="contact-box">
+        <div class="lbl">Email</div>
+        <div class="val">outlandisdavis@gmail.com</div>
+        <div class="sub">Open to construction, maintenance, AI/IT support roles</div>
+      </div>
+      <div class="contact-box">
+        <div class="lbl">Location</div>
+        <div class="val">LaBelle, FL 33935</div>
+        <div class="sub">9010 Abel Court, LaBelle, FL 33935</div>
+      </div>
+      <div class="contact-box">
+        <div class="lbl">Fields of Interest</div>
+        <div class="val">Building maintenance, contractor work, recovery support, mentoring, Python/local AI</div>
+      </div>
+    </div>
+    <div class="contact-note">
+      <b>Resume</b>
+      View the full formatted resume (PDF): <a href="https://drive.google.com/file/d/1Ilvc4eVKTd2oGiTaEMoBe0KHYHvBcb14/view">drive.google.com/file/1Ilvc4eVKTd2oGiTaEMoBe0KHYHvBcb14</a><br>
+      Full resume (Google Doc): <a href="https://docs.google.com/document/d/1F6Nei3O242XewvN0mYMupsWzmMjZJYfKXJQQ4DTT2Mw">docs.google.com/document/1F6Nei3O242XewvN0mYMupsWzmMjZJYfKXJQQ4DTT2Mw</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">John Landis Davis · 9010 Abel Court, LaBelle, FL · (239) 292-1211 · outlandisdavis@gmail.com</div>
+</footer>
+
+</body>
+</html>
