@@ -30,45 +30,99 @@
   a:hover{color:var(--navy)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 
-  /* Header */
+  /* Header with photo */
   header{
+    display:grid;
+    grid-template-columns:180px auto;
+    align-items:center;
     background:var(--navy);
     color:#fff;
-    padding:28px 0;
+    padding:28px 20px;
     border-bottom:6px solid var(--gold);
   }
-  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--gold);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+  }
   .name{
     font-size:26px;
     font-weight:700;
     letter-spacing:.3px;
+    color:#fff;
   }
   .name span{color:var(--gold)}
   .contact-line{
-    font-size:14px;
+    font-size:13px;
     color:#cdd6e2;
-    display:flex;flex-direction:column;gap:2px
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    padding-left:16px;
   }
-  .contact-line b{display:block;font-size:15px}
+  .contact-line b{display:block;font-size:14px}
 
   /* Hero */
   .hero{
     background:radial-gradient(circle at top left,var(--navy),var(--navy2));
     color:#fff;
     text-align:center;
-    padding:52px 20px 40px;
+    padding:40px 20px 36px;
     margin-top:18px;
   }
   .hero h1{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:8px;
     letter-spacing:1px;
   }
   .hero h1 .accent{color:var(--gold)}
-  .hero p{max-width:620px;margin:0 auto 18px;opacity:.92;font-size:16px}
-  .hero .tagline{font-size:15px;opacity:.8}
-  .hero .contact-line-white{color:#fff;font-size:14px;display:flex;flex-direction:column;gap:2px}
-  .hero .contact-line-white b{display:block;font-size:15px}
+  .hero p{max-width:620px;margin:0 auto 14px;opacity:.92;font-size:15px}
+  .hero .contact-line-white{color:#fff;font-size:13px;display:flex;flex-direction:column;gap:2px;opacity:.9}
+  .hero .contact-line-white b{display:block;font-size:14px}
+
+  /* Photographs section */
+  .photos-section{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    margin-top:20px;
+  }
+  .photos-section h2{
+    font-size:20px;
+    color:var(--navy);
+    margin-bottom:14px;
+    padding-bottom:6px;
+    border-bottom:2px solid var(--gold);
+  }
+  .photos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+    margin-top:10px;
+  }
+  .photo-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    text-align:center;
+  }
+  .photo-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+  }
+  .photo-card .caption{
+    padding:10px 12px;
+    font-size:12px;
+    color:var(--gray);
+    background:#faf8f5;
+  }
 
   /* Buttons */
   .btn{
@@ -119,7 +173,7 @@
   .entry p{font-size:14px;color:#444;margin-top:4px}
   .entry ul{margin-top:6px}
   .entry li{font-size:14px;color:#444;margin-bottom:4px;padding-left:16px;position:relative}
-  .entry li::before{content:"•";position:absolute;left:0;color:var(--accent)}
+  .entry li::before{content:"\2022";position:absolute;left:0;color:var(--accent)}
 
   /* Skills grid */
   .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
@@ -133,15 +187,20 @@
   .skill .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
   .skill .val{font-size:13px;color:#444;margin-top:4px}
 
-  /* Driver callout */
-  .driver-card{
+  /* References */
+  .refs-list{list-style:none;padding:0;margin-top:10px}
+  .refs-list li{
     background:#fff;
     border:1px solid var(--line);
-    border-left:4px solid var(--navy);
-    border-radius:var(--radius);
-    padding:14px 16px;
+    border-left:4px solid var(--gold);
+    border-radius:8px;
+    padding:12px 14px;
+    margin-bottom:10px;
+    font-size:14px;
+    color:#444;
   }
-  .driver-card b{display:block;font-size:15px;margin-bottom:4px}
+  .refs-list li b{display:block;color:var(--navy);margin-bottom:2px}
+  .refs-list li .contact{display:flex;flex-direction:column;gap:2px}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -152,6 +211,7 @@
 
   .contact-note{margin-top:14px;font-size:14px;color:#444;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
   .contact-note b{display:block;color:var(--navy);margin-bottom:4px}
+  .contact-note a{color:var(--accent);word-break:break-all}
 
   /* Footer */
   footer{
@@ -165,6 +225,9 @@
   }
 
   @media (max-width:600px){
+    header{grid-template-columns:100px auto;gap:10px}
+    .avatar{width:80px;height:80px}
+    .name{font-size:22px}
     .contact-grid{grid-template-columns:1fr}
     .hero h1{font-size:24px}
     h2{font-size:19px}
@@ -176,6 +239,9 @@
 
 <header>
   <div class="wrap">
+    <div class="avatar">
+      <img src="images/img_8b912a200cec.jpg" alt="John Landis Davis">
+    </div>
     <div class="name">John Landis Davis</div>
     <div class="contact-line">
       <b>9010 Abel Court, LaBelle, FL</b>
@@ -302,8 +368,6 @@
   </div>
 </section>
 
-</section>
-
 <section>
   <div class="wrap">
     <div class="section-label">References</div>
@@ -316,13 +380,40 @@
       </div>
       <div class="entry">
         <div class="org">Dr. Sonji D. Nicholas, Ph.D.</div>
-        <div class="meta"><span>Instructional Associate Professor</span><span>Florida Southwestern State College — Criminal Justice &amp; Psychology</span></div>
+        <div class="meta"><span>Instructional Associate Professor</span><span>FSW — Criminal Justice &amp; Psychology</span></div>
         <div class="meta"><span>Email: Snicholas@fsw.edu</span></div>
       </div>
       <div class="entry">
         <div class="org">Dr. Catherine Cordova, Ph.D.</div>
-        <div class="meta"><span>Assistant Professor</span><span>Florida Southwestern State College — Literacy Education</span></div>
+        <div class="meta"><span>Assistant Professor</span><span>FSW — Literacy Education</span></div>
         <div class="meta"><span>Email: Catherine.Cordova @fsw.edu</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Photographs</div>
+    <h2>Photographs</h2>
+    <div class="block">
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/img_8b912a200cec.jpg" alt="John Landis Davis — Florida Southwestern State College uniform">
+          <div class="caption">Profile Photo —.fssw State College uniform</div>
+        </div>
+        <div class="photo-card">
+          <img src="images/img_adff57d2d23b.jpg" alt="John Landis Davis — FSSW uniform">
+          <div class="caption">FSSW Uniform Photo</div>
+        </div>
+        <div class="photo-card">
+          <img src="images/img_082f41c7c3e9.jpg" alt="John Landis Davis — other job photo">
+          <div class="caption">Job Photo 1</div>
+        </div>
+        <div class="photo-card">
+          <img src="images/img_a1ea7f12ce6d.jpg" alt="John Landis Davis — other job photo">
+          <div class="caption">Job Photo 2</div>
+        </div>
       </div>
     </div>
   </div>
