@@ -36,7 +36,7 @@
     grid-template-columns:180px auto;
     align-items:center;
     background:var(--navy);
-    color:#fff;
+    color:#000;
     padding:28px 20px;
     border-bottom:6px solid var(--gold);
   }
@@ -52,12 +52,11 @@
     font-size:26px;
     font-weight:700;
     letter-spacing:.3px;
-    color:#fff;
+    color:#000;
   }
-  .name span{color:var(--gold)}
   .contact-line{
     font-size:13px;
-    color:#cdd6e2;
+    color:#000;
     display:flex;
     flex-direction:column;
     gap:2px;
@@ -82,60 +81,6 @@
   .hero p{max-width:620px;margin:0 auto 14px;opacity:.92;font-size:15px}
   .hero .contact-line-white{color:#fff;font-size:13px;display:flex;flex-direction:column;gap:2px;opacity:.9}
   .hero .contact-line-white b{display:block;font-size:14px}
-
-  /* Photographs section */
-  .photos-section{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:20px;
-    margin-top:20px;
-  }
-  .photos-section h2{
-    font-size:20px;
-    color:var(--navy);
-    margin-bottom:14px;
-    padding-bottom:6px;
-    border-bottom:2px solid var(--gold);
-  }
-  .photos-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:14px;
-    margin-top:10px;
-  }
-  .photo-card{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    overflow:hidden;
-    text-align:center;
-  }
-  .photo-card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-  }
-  .photo-card .caption{
-    padding:10px 12px;
-    font-size:12px;
-    color:var(--gray);
-    background:#faf8f5;
-  }
-
-  /* Buttons */
-  .btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    padding:12px 22px;
-    border-radius:var(--radius);
-    font-weight:600;
-    margin-top:14px;
-    transition:transform .15s,background .15s;
-  }
-  .btn:hover{background:var(--navy);transform:translateY(-1px)}
 
   /* Sections */
   section{padding:30px 0;border-bottom:1px solid var(--line)}
@@ -231,7 +176,6 @@
     .contact-grid{grid-template-columns:1fr}
     .hero h1{font-size:24px}
     h2{font-size:19px}
-    .name{font-size:22px}
   }
 </style>
 </head>
@@ -387,33 +331,6 @@
         <div class="org">Dr. Catherine Cordova, Ph.D.</div>
         <div class="meta"><span>Assistant Professor</span><span>FSW — Literacy Education</span></div>
         <div class="meta"><span>Email: Catherine.Cordova @fsw.edu</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-label">Photographs</div>
-    <h2>Photographs</h2>
-    <div class="block">
-      <div class="photo-grid">
-        <div class="photo-card">
-          <img src="images/img_8b912a200cec.jpg" alt="John Landis Davis — FSSW uniform">
-          <div class="caption">Profile Photo —.fssw State College uniform</div>
-        </div>
-        <div class="photo-card">
-          <img src="images/img_adff57d2d23b.jpg" alt="John Landis Davis — FSSW uniform">
-          <div class="caption">FSSW Uniform Photo</div>
-        </div>
-        <div class="photo-card">
-          <img src="images/img_082f41c7c3e9.jpg" alt="John Landis Davis — other job photo">
-          <div class="caption">Job Photo 1</div>
-        </div>
-        <div class="photo-card">
-          <img src="images/img_a1ea7f12ce6d.jpg" alt="John Landis Davis — other job photo">
-          <div class="caption">Job Photo 2</div>
-        </div>
       </div>
     </div>
   </div>
