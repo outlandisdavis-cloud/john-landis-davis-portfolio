@@ -3,7 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Landis Davis — Construction & Maintenance Professional</title>
+<title>John Landis Davis — CEO of TechNically OutLandis LLC | LaBelle, FL</title>
+<meta name="description" content="John Landis Davis — construction and maintenance professional in LaBelle, FL. Hands-on experience in building maintenance, independent contracting, recovery support, and student mentorship. A.A. (FSW), B.A. Criminal Justice & Psychology (Saint Leo).">
+<meta name="author" content="John Landis Davis">
+<meta name="keywords" content="construction, maintenance, facilities technician, LaBelle FL, Hendry County, building maintenance, recovery support, Python, local AI">
+<link rel="canonical" href="https://outlandisdavis-cloud.github.io/john-landis-davis-portfolio/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="John Landis Davis — Construction & Maintenance Professional">
+<meta property="og:description" content="Hands-on construction & maintenance professional in LaBelle, FL. Building maintenance, independent contracting, recovery support, and student mentorship.">
+<meta property="og:url" content="https://outlandisdavis-cloud.github.io/john-landis-davis-portfolio/">
+<meta property="og:site_name" content="John Landis Davis Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="John Landis Davis — Construction & Maintenance Professional">
+<meta name="twitter:description" content="Hands-on construction & maintenance professional in LaBelle, FL.">
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231f2a44'/><text x='50' y='68' font-size='52' font-weight='700' text-anchor='middle' fill='%23c9a227' font-family='Arial,sans-serif'>JD</text></svg>">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "John Landis Davis",
+  "jobTitle": "Construction & Maintenance Professional",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9010 Abel Court",
+    "addressLocality": "LaBelle",
+    "addressRegion": "FL",
+    "postalCode": "33935",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-239-292-1211",
+  "email": "outlandisdavis@gmail.com",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Florida Southwestern State College"},
+    {"@type": "CollegeOrUniversity", "name": "Saint Leo University"}
+  ],
+  "knowsAbout": ["Building Maintenance", "Construction Labor", "Independent Contracting", "Recovery Support", "Python", "Local AI"]
+}
+</script>
+
 <style>
   :root{
     --navy:#1f2a44;
@@ -16,6 +61,7 @@
     --bg:#faf8f5;
     --white:#fff;
     --radius:12px;
+    --shadow:0 2px 12px rgba(0,0,0,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -29,6 +75,46 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{color:var(--navy)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* Skip to content (accessibility) */
+  .skip-link{
+    position:absolute;top:-40px;left:0;
+    background:var(--navy);color:#fff;
+    padding:8px 16px;z-index:1000;
+    font-size:14px;font-weight:600;
+    transition:top .2s;
+  }
+  .skip-link:focus{top:0}
+
+  /* Sticky nav */
+  nav.site-nav{
+    position:sticky;top:0;z-index:100;
+    background:var(--navy);
+    border-bottom:3px solid var(--gold);
+    padding:10px 0;
+  }
+  nav.site-nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;
+  }
+  nav.site-nav .nav-brand{
+    color:#fff;font-weight:700;font-size:15px;
+    letter-spacing:.3px;white-space:nowrap;
+  }
+  nav.site-nav .nav-brand span{color:var(--gold)}
+  nav.site-nav .nav-links{
+    display:flex;gap:18px;list-style:none;
+    font-size:13px;font-weight:600;
+  }
+  nav.site-nav .nav-links a{color:#cdd6e2;transition:color .15s}
+  nav.site-nav .nav-links a:hover{color:var(--gold)}
+  nav.site-nav .nav-cta{
+    background:var(--accent);color:#fff;
+    padding:7px 16px;border-radius:var(--radius);
+    font-size:13px;font-weight:600;
+    transition:background .15s,transform .15s;
+  }
+  nav.site-nav .nav-cta:hover{background:var(--navy2);transform:translateY(-1px)}
 
   /* Header */
   header{
@@ -51,7 +137,16 @@
   }
   .contact-line b{display:block;font-size:15px}
 
-  /* Hero */
+  /* Profile photo */
+  .profile-photo{
+    width:140px;height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--gold);
+    box-shadow:0 4px 16px rgba(0,0,0,.25);
+    margin-bottom:16px;
+  }
+  .profile-photo-wrap{text-align:center;margin-bottom:8px}
   .hero{
     background:radial-gradient(circle at top left,var(--navy),var(--navy2));
     color:#fff;
@@ -108,6 +203,7 @@
     border-left:4px solid var(--accent);
     border-radius:8px;
     padding:14px 16px;
+    box-shadow:var(--shadow);
   }
   .entry .org{
     font-size:16px;
@@ -121,6 +217,20 @@
   .entry li{font-size:14px;color:#444;margin-bottom:4px;padding-left:16px;position:relative}
   .entry li::before{content:"•";position:absolute;left:0;color:var(--accent)}
 
+  /* Summary */
+  .summary{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--gold);
+    border-radius:8px;
+    padding:16px 18px;
+    font-size:15px;
+    color:#444;
+    line-height:1.7;
+    box-shadow:var(--shadow);
+  }
+  .summary strong{color:var(--navy)}
+
   /* Skills grid */
   .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
   .skill{
@@ -129,29 +239,46 @@
     border-top:3px solid var(--gold);
     border-radius:var(--radius);
     padding:12px 14px;
+    box-shadow:var(--shadow);
   }
   .skill .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
   .skill .val{font-size:13px;color:#444;margin-top:4px}
 
-  /* Driver callout */
+  /* Driver/transport callout */
   .driver-card{
     background:#fff;
     border:1px solid var(--line);
     border-left:4px solid var(--navy);
     border-radius:var(--radius);
     padding:14px 16px;
+    box-shadow:var(--shadow);
   }
   .driver-card b{display:block;font-size:15px;margin-bottom:4px}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
   .contact-box .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
   .contact-box .val{font-size:15px;font-weight:600;color:var(--navy);margin-top:4px}
   .contact-box .sub{font-size:12px;color:var(--gray);margin-top:2px}
-
-  .contact-note{margin-top:14px;font-size:14px;color:#444;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .contact-note{margin-top:14px;font-size:14px;color:#444;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
   .contact-note b{display:block;color:var(--navy);margin-bottom:4px}
+
+  /* Projects */
+  .project-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px;
+    box-shadow:var(--shadow);
+    transition:transform .15s,box-shadow .15s;
+  }
+  .project-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.1)}
+  .project-card .pc-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .project-card .pc-tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700;margin-bottom:8px}
+  .project-card .pc-desc{font-size:14px;color:#444;line-height:1.6}
+  .project-card .pc-links{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+  .project-card .pc-links a{font-size:13px;font-weight:600}
 
   /* Footer */
   footer{
@@ -164,44 +291,99 @@
     opacity:.85;
   }
 
-  @media (max-width:600px){
+  /* Back to top */
+  .back-to-top{
+    position:fixed;bottom:20px;right:20px;
+    width:42px;height:42px;
+    background:var(--navy);color:#fff;
+    border:none;border-radius:50%;
+    font-size:18px;cursor:pointer;
+    opacity:0;transition:opacity .3s,transform .3s;
+    transform:translateY(10px);
+    z-index:99;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+  }
+  .back-to-top.show{opacity:1;transform:translateY(0)}
+  .back-to-top:hover{background:var(--accent)}
+
+  /* Responsive */
+  @media (max-width:768px){
+    nav.site-nav .nav-links{display:none}
     .contact-grid{grid-template-columns:1fr}
     .hero h1{font-size:24px}
     h2{font-size:19px}
     .name{font-size:22px}
+    .skills-grid{grid-template-columns:1fr}
+    header .wrap{flex-direction:column;gap:8px;text-align:center}
+    .contact-line{text-align:center}
+  }
+  @media (max-width:480px){
+    .hero{padding:36px 16px 28px}
+    .hero h1{font-size:20px}
+    .wrap{padding:0 14px}
+    section{padding:22px 0}
+  }
+  @media print{
+    nav.site-nav,.back-to-top{display:none}
+    body{background:#fff}
+    section{border-bottom:1px solid #ccc}
+    .entry,.skill,.contact-box,.driver-card,.summary,.project-card{box-shadow:none;border:1px solid #ccc}
   }
 </style>
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-brand">John Landis <span>Davis</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#honors">Honors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Get In Touch</a>
+  </div>
+</nav>
+
 <header>
   <div class="wrap">
     <div class="name">John Landis Davis</div>
     <div class="contact-line">
-      <b>9010 Abel Court, LaBelle, FL</b>
+      <b>9010 Abel Court, LaBelle, FL 33935</b>
       <b>(239) 292-1211</b>
       <b>outlandisdavis@gmail.com</b>
     </div>
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
-  <h1>Construction &amp; Maintenance<br><span class="accent">Professional</span></h1>
-  <p>Hands-on experience across construction labor, maintenance, independent contracting, behavioral health support, and student mentorship.</p>
+  <div class="profile-photo-wrap">
+    <img src="profile.jpg" alt="John Landis Davis" class="profile-photo">
+  </div>
+  <h1>CEO of <span class="accent">TechNically OutLandis LLC</span></h1>
+  <p>Construction &amp; Maintenance Professional · LaBelle, FL</p>
   <div class="contact-line-white">
-    <b>9010 Abel Court, LaBelle, FL</b>
+    <b>9010 Abel Court, LaBelle, FL 33935</b>
     <b>(239) 292-1211</b>
     <b>outlandisdavis@gmail.com</b>
   </div>
   <a class="btn" href="#contact">Get In Touch</a>
 </section>
 
-<section>
+<section id="about">
   <div class="wrap">
     <div class="section-label">About</div>
-    <h2>Education &amp; Skills</h2>
+    <h2>Professional Summary</h2>
+    <div class="summary">
+      <strong>Reliable, hands-on construction and maintenance professional</strong> with experience in building repairs, preventive maintenance, independent contracting, and team coordination. Proven ability to manage projects end-to-end, adapt to rotating job sites, and deliver quality work under tight schedules. Backed by an A.A. from Florida Southwestern State College and a B.A. in Criminal Justice &amp; Psychology from Saint Leo University. Currently pursuing FSW trade credentials (HVAC/R, electrician) and a Certified Recovery Peer Specialist (CRPS) certification. Disciplined learner with growing Python and local AI skills.
+    </div>
 
-    <div class="block">
+    <div class="block" style="margin-top:18px">
       <h3>Education</h3>
       <div class="entry">
         <div class="org">Florida Southwestern State College — Ft. Myers, FL</div>
@@ -220,7 +402,7 @@
     <div class="block">
       <h3>Skills</h3>
       <div class="skills-grid">
-        <div class="skill"><div class="lbl">Technical</div><div class="val">Python (basic), PyCharm (IDE), basic computer literacy</div></div>
+        <div class="skill"><div class="lbl">Technical</div><div class="val">Python (basic), PyCharm, computer literacy, local AI (Ollama)</div></div>
         <div class="skill"><div class="lbl">Construction &amp; Maintenance</div><div class="val">site labor, repairs, preventive maintenance, material handling, site prep, construction support</div></div>
         <div class="skill"><div class="lbl">Independent Contracting</div><div class="val">LLC owner/operator, subcontracting management, project scheduling, on-site logistics</div></div>
         <div class="skill"><div class="lbl">Interpersonal</div><div class="val">client liaison, student mentoring, cross-departmental communication, recovery support, team collaboration</div></div>
@@ -230,13 +412,13 @@
     <div class="block">
       <div class="driver-card">
         <b>Transportation</b>
-        No driver's license. Relies on a 20-mile-range electric scooter for local transport — job search limited to commute-radius employers.
+        Relies on a 20-mile-range electric scooter for local transport. Available for positions within a 20-mile radius of LaBelle, FL; open to carpool arrangements for roles beyond that range.
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="experience">
   <div class="wrap">
     <div class="section-label">Experience</div>
     <h2>Work Experience</h2>
@@ -295,7 +477,34 @@
   </div>
 </section>
 
-<section>
+<section id="projects">
+  <div class="wrap">
+    <div class="section-label">Projects</div>
+    <h2>Personal Projects &amp; Learning</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div class="project-card">
+        <div class="pc-tag">Python · Local AI</div>
+        <div class="pc-title">90-Day Python Curriculum</div>
+        <div class="pc-desc">Self-directed, project-first Python learning plan built on Harvard CS50P. Covers variables, control flow, functions, files, OOP, testing, and a tested capstone project. Uses a local Ollama model (qwen2.5-coder:1.5b) as an offline coding mentor.</div>
+        <div class="pc-links"><a href="https://github.com/johnjdavisiv" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+      <div class="project-card">
+        <div class="pc-tag">Web App · PWA</div>
+        <div class="pc-title">LifeStory Memoir App</div>
+        <div class="pc-desc">Single-file Progressive Web App for writing and organizing a personal memoir. Features chapter management, character/place/theme tracking, co-occurrence analysis, timeline visualization, and multi-format export (DOCX, EPUB, PDF). Installable on desktop and mobile.</div>
+        <div class="pc-links"><a href="https://outlandisdavis-cloud.github.io/lifestory/" target="_blank" rel="noopener">Live Demo →</a></div>
+      </div>
+      <div class="project-card">
+        <div class="pc-tag">Open Source · AI</div>
+        <div class="pc-title">Local AI Tooling</div>
+        <div class="pc-desc">Experiments with local/offline AI models (Ollama, Qwen 2.5 Coder). Documents the process of running and evaluating small language models on low-end hardware as a portfolio asset for AI-training roles.</div>
+        <div class="pc-links"><a href="https://github.com/johnjdavisiv" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="honors">
   <div class="wrap">
     <div class="section-label">Honors</div>
     <h2>Honors &amp; Awards</h2>
@@ -309,7 +518,7 @@
   </div>
 </section>
 
-<section>
+<section id="contact">
   <div class="wrap">
     <div class="section-label">Connect</div>
     <h2>Contact</h2>
@@ -317,7 +526,7 @@
       <div class="contact-box">
         <div class="lbl">Phone</div>
         <div class="val">(239) 292-1211</div>
-        <div class="sub">Local transport by electric scooter</div>
+        <div class="sub">Call or text</div>
       </div>
       <div class="contact-box">
         <div class="lbl">Email</div>
@@ -330,21 +539,36 @@
         <div class="sub">9010 Abel Court, LaBelle, FL 33935</div>
       </div>
       <div class="contact-box">
-        <div class="lbl">Fields of Interest</div>
-        <div class="val">Building maintenance, contractor work, recovery support, mentoring, Python/local AI</div>
+        <div class="lbl">Links</div>
+        <div class="val" style="font-size:14px">
+          <a href="https://github.com/johnjdavisiv" target="_blank" rel="noopener" style="display:block;margin-bottom:2px">GitHub</a>
+          <a href="https://www.linkedin.com/in/john-landis-davis" target="_blank" rel="noopener" style="display:block">LinkedIn</a>
+        </div>
+        <div class="sub">Professional profiles</div>
       </div>
     </div>
     <div class="contact-note">
       <b>Resume</b>
-      View the full formatted resume (PDF): <a href="https://drive.google.com/file/d/1Ilvc4eVKTd2oGiTaEMoBe0KHYHvBcb14/view">drive.google.com/file/1Ilvc4eVKTd2oGiTaEMoBe0KHYHvBcb14</a><br>
-      Full resume (Google Doc): <a href="https://docs.google.com/document/d/1F6Nei3O242XewvN0mYMupsWzmMjZJYfKXJQQ4DTT2Mw">docs.google.com/document/1F6Nei3O242XewvN0mYMupsWzmMjZJYfKXJQQ4DTT2Mw</a>
+      View the full formatted resume (PDF): <a href="https://drive.google.com/file/d/1Ilvc4eVKTd2oGiTaEMoBe0KHYHvBcb14/view" target="_blank" rel="noopener">Google Drive</a><br>
+      Full resume (Google Doc): <a href="https://docs.google.com/document/d/1F6Nei3O242XewvN0mYMupsWzmMjZJYfKXJQQ4DTT2Mw" target="_blank" rel="noopener">Google Docs</a>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">John Landis Davis · 9010 Abel Court, LaBelle, FL · (239) 292-1211 · outlandisdavis@gmail.com</div>
 </footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+  // Back to top visibility
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('show', window.scrollY > 400);
+  });
+</script>
 
 </body>
 </html>
